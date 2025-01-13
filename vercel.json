@@ -1,0 +1,21 @@
+{
+  "builds": [
+    {
+      "src": "flutter-web-app/**/*",
+      "use": "@vercel/static",
+      "config": {
+        "outputDirectory": "flutter-web-app"
+      }
+    }
+  ],
+  "build": {
+    "env": {
+      "FLUTTER_VERSION": "stable"
+    },
+    "commands": [
+      "curl -fsSL https://flutter.dev/docs/get-started/install/linux | bash",
+      "flutter doctor",
+      "flutter build web"
+    ]
+  }
+}
